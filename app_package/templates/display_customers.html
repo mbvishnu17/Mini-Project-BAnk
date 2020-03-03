@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="header"><p id="nm">Details<p>
+</div>
+<fieldset>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Account Number</th>
+        <th>Balance</th>
+        <th>Mobile Number</th>
+   </tr>
+   {% for customer in customers %}
+        <tr>
+            <td>{{customer._id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.acc_type}}</td>
+            <td>{{customer.cid}}</td>
+            <td>{{customer.balance}}</td>
+            <td>{{customer.mobile}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</fieldset>
+<p><a href="{{url_for('menu')}}">Back to menu</a></p>
+{% endblock %}

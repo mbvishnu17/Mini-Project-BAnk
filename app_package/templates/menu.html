@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>Home page</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <link rel="stylesheet" href='/static/css/menu.css'>
+     <link rel='icon' href='/static/images/agnes.jpeg'>
+     </head>
+    
+{% block content %}
+ <body>
+ <ul>
+    <li><a href="{{url_for('logout')}}">Logout </a></li>
+    <li><a href="{{url_for('create')}}">Create new account holder</a></li>
+    <li><a href="{{url_for('deposit')}}">Deposit</a></li>
+    <li><a href="{{url_for('withdraw')}}">Withdraw</a></li>
+    <li><a href="{{url_for('balance')}}">Balance</a></li>
+    <li><a href="{{url_for('delete')}}">Close</a></li>
+   <li><a href="{{url_for('display_customers')}}">Display Customer</a></li>
+   </body>
+   </ul>
+{% endblock %}
+
+</html>
